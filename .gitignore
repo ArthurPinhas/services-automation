@@ -1,0 +1,29 @@
+# Visual Studio Code settings
+.vscode/
+
+# Compiled files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.sln.docstates
+
+# Packages folder created by NuGet Package Restore
+packages/
+
+# .NET Core build files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio files
+*.userprefs
+*.suo
+*.cache
+*.dll.refresh
+*.log
+
+# macOS files
+.DS_Store
