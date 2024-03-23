@@ -27,3 +27,5 @@ artifacts/
 
 # macOS files
 .DS_Store
+
+*.json
