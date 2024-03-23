@@ -3,10 +3,10 @@ using NUnit.Framework;
 
 namespace SeleniumTests
 {
-    public class SeleniumTests : PageObjectsSetup
+    public class ServiceTests : PageObjectsSetup
     {
         [Test]
-        [Category("Selenium")]
+        [Category("ServiceTests")]
         public void FirstTest()
         {
             PageObjects.VerifyDockerContainers();

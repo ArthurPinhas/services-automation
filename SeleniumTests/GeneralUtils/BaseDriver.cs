@@ -9,6 +9,7 @@ namespace GeneralUtils
     public class BaseDriver
     {
         public static IWebDriver driver;
+        protected AppSettings AppSettings;
 
         [SetUp]
         public void Setup()
@@ -25,6 +26,7 @@ namespace GeneralUtils
             options.AddArguments("window-size=1920,1080");
 
             driver = new ChromeDriver(options);
+            GeneralMethods.InitializeBaseDriver();
             driver.Manage().Window.Maximize();
         }
 

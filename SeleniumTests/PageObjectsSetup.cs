@@ -12,6 +12,15 @@ namespace SeleniumTests
         public void SetUpPageObjects()
         {
             PageObjects = new PageObjects(driver);
+            AppSettings settings = AppSettings.LoadSettings(
+                "/Users/arthurpinhas/CodeRepos/services-automation/SeleniumTests/appsettings.pageobjects.json"
+            );
+
+            string className = GetType().Name;
+            if (className.Equals("ServiceTests"))
+            {
+                GeneralLogin.LoginToPortainer(settings.Url, settings.Username, settings.Password);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 using GeneralUtils;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using SeleniumTests.Elements;
 
@@ -15,8 +16,7 @@ namespace Logic
 
         public void VerifyDockerContainers()
         {
-            driver.Navigate().GoToUrl(Elements.DockerContainerPage); // Now you can use Elements.DockerContainerPage directly
-            // Thread.Sleep(5000);
+            Thread.Sleep(5000);
             // IWebElement searchElem = driver.FindElement(By.CssSelector("[id='APjFqb']"));
             // searchElem.SendKeys("what is love");
 
