@@ -7,6 +7,7 @@ namespace GeneralUtils
         public string Url { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string NotifyTopic { get; set; }
 
         public static AppSettings LoadSettings(string file_path)
         {

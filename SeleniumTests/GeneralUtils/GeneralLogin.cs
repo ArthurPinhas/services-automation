@@ -19,23 +19,7 @@ namespace GeneralUtils
             GeneralMethods.SendKeys(Elements.UserInput, userName);
             GeneralMethods.SendKeys(Elements.PassInput, password);
             GeneralMethods.Click(Elements.LoginButton);
-            Thread.Sleep(2000);
-        }
-
-        public static void SendKeys(string cssSelector, string text)
-        {
-            try
-            {
-                IWebElement element = GeneralMethods.GetWebElement(cssSelector);
-                element.Clear();
-                element.SendKeys(text);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(
-                    $"Method SendKeys failed css: {cssSelector} text: {text}, {ex.Message}"
-                );
-            }
+            GeneralMethods.WaitUntilElementIsDisplayed(Elements.PortainerSearchXpath);
         }
     }
 }

@@ -7,14 +7,16 @@ namespace SeleniumTests
     public class PageObjectsSetup : BaseDriver
     {
         public PageObjects PageObjects;
+        public AppSettings settings;
 
         [SetUp]
         public void SetUpPageObjects()
         {
-            PageObjects = new PageObjects(driver);
             AppSettings settings = AppSettings.LoadSettings(
                 "/Users/arthurpinhas/CodeRepos/services-automation/SeleniumTests/appsettings.pageobjects.json"
             );
+
+            PageObjects = new PageObjects(driver, settings);
 
             string className = GetType().Name;
             if (className.Equals("ServiceTests"))

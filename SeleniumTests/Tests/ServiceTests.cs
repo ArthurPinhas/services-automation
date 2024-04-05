@@ -7,7 +7,7 @@ namespace SeleniumTests
     {
         [Test]
         [Category("ServiceTests")]
-        public void FirstTest()
+        public void VerifyPortainerContainers()
         {
             PageObjects.VerifyDockerContainers();
         }
