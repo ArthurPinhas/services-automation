@@ -1,3 +1,5 @@
+Certainly! Here's the updated section integrated into the existing README file:
+
 ---
 
 # Services Automation
@@ -55,6 +57,48 @@ To run the automated tests, follow these steps:
    ```bash
    dotnet test
    ```
+
+## Automation with Cron
+
+To automate the runtime of the automation and schedule it to run at specific times, you can use cron jobs on Unix-like systems (including macOS and Linux).
+
+### Setting up a Cron Job
+
+A cron job allows you to schedule tasks to run periodically at specified times. You can add a cron job to execute your automation script at specific intervals. Here's an example of how to set up a cron job:
+
+1. Open your terminal and run the following command to edit the crontab file:
+
+   ```bash
+   crontab -e
+   ```
+
+2. Add a new line to the crontab file to specify when and how often the script should run. For example, to run the script every day at 6:45 PM, you can add the following line:
+
+   ```cron
+   45 18 * * * /path/to/your/script.sh >> /path/to/log/file.log 2>&1
+   ```
+
+   Replace `/path/to/your/script.sh` with the path to your bash script and `/path/to/log/file.log` with the path to your log file. This line tells cron to execute the script `script.sh` at 6:45 PM every day and redirect the output to a log file.
+
+3. Save and exit the crontab file. The cron job is now scheduled, and your script will run automatically at the specified time.
+
+### Example Bash Script
+
+Below is an example of a simple bash script that can be used with a cron job to automate the runtime of your automation:
+
+```bash
+#!/bin/bash
+
+# Navigate to the project directory
+cd /path/to/your/project/directory
+
+# Run the automation script
+dotnet test
+```
+
+Replace `/path/to/your/project/directory` with the path to your project directory. This script navigates to the project directory and executes the automation script using the `dotnet test` command.
+
+By combining a cron job with a bash script, you can automate the execution of your automation script at specific intervals.
 
 ## Contributions
 

@@ -18,7 +18,7 @@ namespace GeneralUtils
 
             // Configure ChromeOptions
             ChromeOptions options = new ChromeOptions();
-            // options.AddArguments("--headless");
+            options.AddArguments("--headless");
             options.AddArguments("--disable-blink-features=AutomationControlled");
             options.AddArguments("--disable-extensions");
             options.AddArguments("--disable-dev-shm-usage");
